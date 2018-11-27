@@ -1,0 +1,21 @@
+
+
+ < symbol table > :
+
+	2	00000000	a	4	4	dd	[5]
+	3	00000004	b	4	4	dd	[10]
+	4	00000008	c	4	4	dd	[10]
+	5	0000000C	d	4	4	dd	[20]
+	6	00000014	msg	1	5	db	hello
+	9	00000000	s1	4	12	resd	3
+	10	0000000C	s2	1	1	resb	1
+	11	0000000D	s3	4	12	resd	3
+
+
+< literal table > :
+
+	0		12	0xc
+	1		14	0xe
+	2		13	0xd
+	3		a	0x61
+	4		z	0x7a

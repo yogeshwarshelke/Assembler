@@ -1,0 +1,8 @@
+2	a	dd	1	s	define	0	['5']
+3	b	dd	1	s	define	4	['10']
+4	c	dd	1	s	define	8	['10']
+5	d	dd	1	s	define	12	['20']
+6	msg	db	5	s	define	16	"hello",10,0
+9	s1	resd	1	s	define	0	['3']
+10	s2	resb	1	s	define	12	['1']
+11	s3	resd	1	s	define	13	['3']

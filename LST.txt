@@ -1,0 +1,36 @@
+
+0E1B1000 <section .data >
+
+	00000000 05000000			a dd 5
+	00000004 0A000000			b dd 10
+	00000008 0A000000			c dd 10
+	0000000C 14000000			d dd 20
+	00000014 68656C6C6F0A00			msg db "hello",10,0
+
+0E1B1001 <section .bss >
+
+	00000000 <res 0000000C>			s1 resd 3
+	0000000C <res 00000001>			s2 resb 1
+	0000000D <res 0000000C>			s3 resd 3
+
+0E1B1002 <section .text >
+
+					global main
+					extern printf
+				main:
+00000000 B8[00000000]			mov eax,a
+00000005 05[04000000]			add ebx,b
+0000000B B80C000000			mov ecx,12
+00000010 B80E000000			mov eax,14
+00000015 B80C000000			mov edx,12
+0000001A B80D000000			mov eax,13
+0000001F B861000000			mov eax,'a'
+00000024 8A70				mov al,'z'
+00000026 8BC3				mov ebx,eax
+00000028 8B[00000000]			mov eax,dword[a]
+0000002D 8B83[00000000]			mov eax,dword[a+ebx]
+00000032 8B83[04000000]			mov eax,dword[ebx+b]
+00000037 8B4301				mov eax,dword[ebx+1]
+0000003C 8B4301				mov eax,dword[1+ebx]
+00000041 89[00000000]			mov dword[a],eax
+00000047 89[00000000]			mov dword[a+edx],eax
